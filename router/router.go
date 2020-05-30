@@ -14,8 +14,6 @@ func Auth(r *ghttp.Request)  {
 }
 func init() {
 	s := g.Server()
-	s.Group("/ai", func(group *ghttp.RouterGroup) {
-		group.Middleware(Auth)
-		group.ALL("/:name", ai.Ai)
-	})
+	s.Use(Auth)
+	s.BindHandler("/ai/*pth",ai.Ai)
 }
