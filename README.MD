@@ -1,6 +1,8 @@
 # GoForst Bird
 
-鸟类识别后端使用
+鸟类识别后端组件
 
-1. gf
-2. paddlepaddle
+微服务网关
+
+1. 连接池
+2. 鉴权
