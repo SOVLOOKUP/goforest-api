@@ -2,18 +2,18 @@ package ai
 
 import (
 	"gf-app/boot"
-	"github.com/gogf/gf/frame/g"
+	"gf-app/lib/resp"
 	"github.com/gogf/gf/net/ghttp"
 )
 
 // Ai 动态路由解析
 func Ai(r *ghttp.Request) {
 	if rq, err := boot.Client.Post("http://"+r.GetString("pth"), r.GetBody()); err != nil {
-		r.Response.WriteJsonExit(g.Map{"code":"404","msg":"router found","detail":err.Error()})
+		r.Response.WriteStatusExit(404,resp.Resp404(err.Error()))
 	} else {
-		r.Response.WriteJsonExit(rq.ReadAll())
-	}
+		r.Response.WriteExit(rq.ReadAll())
 
+	}
 }
 
 
