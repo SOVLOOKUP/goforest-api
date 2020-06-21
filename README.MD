@@ -2,6 +2,8 @@
 
 goforest的ai服务API管理组件,微服务网关
 
+端口8199
+
 ## 依赖微服务
 
 |name|repo|

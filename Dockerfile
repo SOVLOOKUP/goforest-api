@@ -1,6 +1,6 @@
 FROM loads/alpine:3.8
 
-LABEL maintainer="john@goframe.org"
+LABEL maintainer="805408477@qq.com"
 
 ###############################################################################
 #                                INSTALLATION
