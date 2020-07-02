@@ -24,8 +24,11 @@ func Auth(r *ghttp.Request)  {
 	}
 }
 
+
+
 func init() {
 	s := g.Server()
-	s.Use(Auth)
+
+	//s.Use(Auth)
 	s.BindHandler("/ai/*pth",ai.Ai)
 }

@@ -6,6 +6,5 @@ import "github.com/gogf/gf/net/ghttp"
 var Client = ghttp.NewClient()
 
 func init() {
-
 }
 
